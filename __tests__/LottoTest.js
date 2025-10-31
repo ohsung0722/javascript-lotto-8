@@ -21,9 +21,8 @@ describe("로또 클래스 테스트", () => {
   });
 
   test("로또 번호가 6개 이면서 중복된 숫자가 없다면 정상적으로 lotto 인스턴스가 생성된다.", () => {
-    expect(() => {
-      new Lotto([1, 2, 3, 4, 5, 6]);
-    }).toBeInstanceOf(Lotto);
+    const lotto = new Lotto([1, 2, 3, 4, 5, 6]);
+    expect(lotto).toBeInstanceOf(Lotto);
   });
 
   // TODO: 추가 기능 구현에 따른 테스트 코드 작성
@@ -37,16 +36,16 @@ describe("로또 클래스 테스트", () => {
   test("당첨 번호와 일치하는 개수를 반환한다.", () => {
     const lotto = new Lotto([1, 2, 3, 4, 5, 6]);
     const winningNumbers = [3, 4, 5, 8, 9, 10];
-    expect(lotto.matchCount(winningNumbers).toBe(3));
+    expect(lotto.matchCount(winningNumbers)).toBe(3);
   });
 
   test("특정 번호가 포함되어 있으면 true를 반환한다.", () => {
     const lotto = new Lotto([1, 2, 3, 4, 5, 6]);
-    expect(lotto.contatins(3).toBe(true));
+    expect(lotto.contains(3)).toBe(true);
   });
 
   test("특정 번호가 포함되어 있지 않으면 false를 반환한다.", () => {
     const lotto = new Lotto([1, 2, 3, 4, 5, 6]);
-    expect(lotto.contatins(8).toBe(false));
+    expect(lotto.contains(8)).toBe(false);
   });
 });
