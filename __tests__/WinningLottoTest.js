@@ -9,9 +9,8 @@ describe("당첨이 몇개인지, 보너스 번호가 포함되는지를 저장�
   });
 
   test("중복되지 않은 보너스 번호라면 정상적으로 생성된다.", () => {
-    expect(() => new WinningLotto([1, 2, 3, 4, 5, 6], 7)).toBeInstanceOf(
-      WinningLotto
-    );
+    const winningLotto = new WinningLotto([1, 2, 3, 4, 5, 6], 7);
+    expect(winningLotto).toBeInstanceOf(WinningLotto);
   });
 
   test("로또 번호를 3개 맞추고 보너스 번호는 불일치 하는 경우", () => {
@@ -20,7 +19,7 @@ describe("당첨이 몇개인지, 보너스 번호가 포함되는지를 저장�
 
     const result = winningLotto.match(lotto);
 
-    expect(result).toEqual({ matchCount: 3 });
+    expect(result).toEqual({ matchCount: 3, bonusMatch: false });
   });
 
   test("로또가 5개 번호를 맞추고 보너스 번호도 맞춘 경우", () => {
