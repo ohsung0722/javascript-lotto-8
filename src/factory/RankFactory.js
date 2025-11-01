@@ -3,12 +3,12 @@ import Rank from "../model/Rank.js";
 
 class RankFactory {
   static createRank(matchCount, bonusMatch) {
-    const config =
-      RANK_CONFIG.RANKS.find(
-        (rank) => rank.matchCount === matchCount && rank.bonus === bonusMatch
-      ) || RANK_CONFIG.MISS;
-
-    return new Rank(config);
+    if (matchCount === 6) return Rank.FIRST;
+    if (matchCount === 5 && bonusMatch) return Rank.SECOND;
+    if (matchCount === 5) return Rank.THIRD;
+    if (matchCount === 4) return Rank.FOURTH;
+    if (matchCount === 3) return Rank.FIFTH;
+    return Rank.MISS;
   }
 }
 
