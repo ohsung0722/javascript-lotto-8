@@ -1,3 +1,4 @@
+import { ERROR_MESSAGE } from "../constants/message.js";
 import DefaultError from "../error/DefaultError.js";
 
 class WinningLotto {
@@ -12,7 +13,7 @@ class WinningLotto {
 
   #validate(winningNumbers, bonusNumber) {
     if (winningNumbers.includes(bonusNumber)) {
-      throw new DefaultError("로또 번호와 보너스 번호는 중복될 수 없습니다.");
+      throw new DefaultError(ERROR_MESSAGE.DUPLICATED_LOTTO_AND_BONUS_NUMBER);
     }
   }
 

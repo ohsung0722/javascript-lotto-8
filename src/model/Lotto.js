@@ -1,3 +1,7 @@
+import { LOTTO_SIZE } from "../constants/lotto.js";
+import { ERROR_MESSAGE } from "../constants/message.js";
+import DefaultError from "../error/DefaultError.js";
+
 class Lotto {
   #numbers;
 
@@ -7,8 +11,8 @@ class Lotto {
   }
 
   #validate(numbers) {
-    if (numbers.length !== 6) {
-      throw new Error("[ERROR] 로또 번호는 6개여야 합니다.");
+    if (numbers.length !== LOTTO_SIZE) {
+      throw new DefaultError(ERROR_MESSAGE.INVALID_LOTTO_SIZE);
     }
   }
 
