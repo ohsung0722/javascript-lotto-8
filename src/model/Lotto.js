@@ -1,6 +1,7 @@
 import { LOTTO_SIZE } from "../constants/lotto.js";
 import { ERROR_MESSAGE } from "../constants/message.js";
 import DefaultError from "../error/DefaultError.js";
+import { hasNoDuplicates } from "../utils/validator.js";
 
 class Lotto {
   #numbers;
@@ -13,6 +14,10 @@ class Lotto {
   #validate(numbers) {
     if (numbers.length !== LOTTO_SIZE) {
       throw new DefaultError(ERROR_MESSAGE.INVALID_LOTTO_SIZE);
+    }
+
+    if (!hasNoDuplicates(numbers)) {
+      throw new DefaultError(ERROR_MESSAGE.DUPLICATED_NUMBER);
     }
   }
 

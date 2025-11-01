@@ -14,7 +14,7 @@ export const ERROR_MESSAGE = {
   INVALID_PURCHASE_MIN: "구입 금액은 1,000원 이상이어야 합니다.",
   INVALID_LOTTO_NUMBER: "로또 번호는 1부터 45 사이의 정수여야 합니다.",
   INVALID_LOTTO_SIZE: "로또 번호는 6개여야 합니다.",
-  DUPLICATED_NUMBER: "로또 번호는 중복될 수 없습니다.",
+  DUPLICATED_NUMBER: "로또 번호는 중복된 숫자가 발생할 수 없습니다.",
   DUPLICATED_LOTTO_AND_BONUS_NUMBER:
     "로또 번호와 보너스 번호는 중복될 수 없습니다.",
 };
