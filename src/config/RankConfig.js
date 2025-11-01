@@ -12,7 +12,7 @@ export const RANK_CONFIG = {
       matchCount: 5,
       bonus: true,
       prize: 30000000,
-      label: "5개 + 보너스 볼 일치",
+      label: "5개 일치, 보너스 볼 일치",
     },
     {
       name: "THIRD",
