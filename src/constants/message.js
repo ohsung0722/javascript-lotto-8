@@ -15,3 +15,16 @@ export const ERROR_MESSAGE = {
   DUPLICATED_LOTTO_AND_BONUS_NUMBER:
     "로또 번호와 보너스 번호는 중복될 수 없습니다.",
 };
+
+export const OUTPUT_MESSAGES = {
+  //로또 구매 관련
+  PURCHASED_LOTTO_AMOUNT: (amount) => `${amount}개를 구매했습니다.`,
+  PURCHASED_LOTTO_NUMBERS: (numbers) => `[${numbers.join(", ")}]`,
+
+  //통계 타이틀
+  STAT_TITLE: "당첨 통계",
+  SEPARATOR: "---",
+
+  //수익률 출력
+  PROFIT_RATE: (rate) => `총 수익률은 ${rate}%입니다.`,
+};
