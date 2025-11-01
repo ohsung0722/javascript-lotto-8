@@ -38,6 +38,14 @@ class LottoValidator {
       throw new DefaultError(ERROR_MESSAGE.INVALID_LOTTO_NUMBER);
     }
   }
+
+  validateBonusNumber(bonus, winningNumbers) {
+    this.validateLottoNumber(bonus);
+
+    if (winningNumbers.includes(bonus)) {
+      throw new DefaultError(ERROR_MESSAGE.DUPLICATED_LOTTO_AND_BONUS_NUMBER);
+    }
+  }
 }
 
 export default LottoValidator;

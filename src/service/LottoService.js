@@ -14,7 +14,7 @@ class LottoService {
       this.#createSingleLotto()
     );
 
-    return lottos;
+    return { count, lottos };
   }
 
   #calculateLottoCount(amount) {

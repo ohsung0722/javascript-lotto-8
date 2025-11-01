@@ -1,6 +1,6 @@
-import { RANK_CONFIG } from "../config/RankConfig";
-import { RESULT_ROW_FORMAT } from "../constants/resultFormat";
-import RankFactory from "../factory/RankFactory";
+import { RANK_CONFIG } from "../config/RankConfig.js";
+import { RESULT_ROW_FORMAT } from "../constants/resultFormat.js";
+import RankFactory from "../factory/RankFactory.js";
 
 class LottoResult {
   constructor() {

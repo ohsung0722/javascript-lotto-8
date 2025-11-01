@@ -2,8 +2,8 @@ import { Console } from "@woowacourse/mission-utils";
 import { INPUT_MESSAGE } from "../constants/message.js";
 
 class InputView {
-  async inputPaymentAmount() {
-    return Console.readLineAsync(INPUT_MESSAGE.PAYMENT_AMOUNT);
+  async inputPurchaseAmount() {
+    return Console.readLineAsync(INPUT_MESSAGE.PURCHASE_AMOUNT);
   }
 
   async inputWinningNumbers() {

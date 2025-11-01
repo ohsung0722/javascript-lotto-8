@@ -1,4 +1,4 @@
-import { ERROR_PREFIX } from "../constants/message";
+import { ERROR_PREFIX } from "../constants/message.js";
 
 class DefaultError extends Error {
   constructor(message) {

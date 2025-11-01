@@ -2,8 +2,8 @@ import { Console } from "@woowacourse/mission-utils";
 import { OUTPUT_MESSAGES } from "../constants/message.js";
 
 class OutputView {
-  printPurchasedLotto(lottos) {
-    this.#printPurchasedLottoAmount(lottos.amount);
+  printPurchasedLotto(count, lottos) {
+    this.#printPurchasedLottoAmount(count);
     this.#printPurchasedLottoNumbers(lottos);
   }
 
@@ -11,6 +11,10 @@ class OutputView {
     this.#printHeader();
     this.#printRankRows(result);
     this.#printProfitRate(result, purchaseAmount);
+  }
+
+  printError(message) {
+    Console.print(message);
   }
 
   #printPurchasedLottoAmount(amount) {
