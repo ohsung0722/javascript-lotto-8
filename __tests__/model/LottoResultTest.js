@@ -1,5 +1,5 @@
-import LottoResult from "../src/model/LottoResult.js";
-import RankFactory from "../src/factory/RankFactory.js";
+import LottoResult from "../../src/model/LottoResult.js";
+import RankFactory from "../../src/factory/RankFactory.js";
 
 describe("LottoResult 도메인 테스트 (RankFactory 활용)", () => {
   let lottoResult;

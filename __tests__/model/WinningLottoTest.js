@@ -1,5 +1,5 @@
-import Lotto from "../src/model/Lotto.js";
-import WinningLotto from "../src/model/WinningLotto.js";
+import Lotto from "../../src/model/Lotto.js";
+import WinningLotto from "../../src/model/WinningLotto.js";
 
 describe("당첨이 몇개인지, 보너스 번호가 포함되는지를 저장하는 WinningLotto 클래스 테스트", () => {
   test("보너스 번호와 당첨 번호가 중복되면 예외가 발생한다.", () => {

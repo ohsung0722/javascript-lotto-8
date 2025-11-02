@@ -1,4 +1,4 @@
-import RankFactory from "../src/factory/RankFactory.js";
+import RankFactory from "../../src/factory/RankFactory.js";
 
 describe("RankFactory를 활용한 Rank 객체 생성을 통해 규칙이 잘 적용되는지 확인", () => {
   test("6개 일치 시 1등 Rank 객체를 반환한다.", () => {
