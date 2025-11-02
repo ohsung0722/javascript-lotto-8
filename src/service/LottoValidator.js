@@ -10,11 +10,14 @@ import { hasNoDuplicates, isInRange, isInteger } from "../utils/validator.js";
 
 class LottoValidator {
   validatePurchaseAmount(amount) {
-    if (!isInteger(amount) || amount % LOTTO_PRICE !== 0) {
+    if (!isInteger(amount)) {
       throw new DefaultError(ERROR_MESSAGE.INVALID_PURCHASE_UNIT);
     }
     if (amount < LOTTO_PRICE) {
       throw new DefaultError(ERROR_MESSAGE.INVALID_PURCHASE_MIN);
+    }
+    if (amount % LOTTO_PRICE !== 0) {
+      throw new DefaultError(ERROR_MESSAGE.INVALID_PURCHASE_UNIT);
     }
   }
 
