@@ -1,6 +1,7 @@
 import { RANK_CONFIG } from "../config/RankConfig.js";
 import { RESULT_ROW_FORMAT } from "../constants/resultFormat.js";
 import RankFactory from "../factory/RankFactory.js";
+import { roundToDecimal } from "../utils/math.js";
 
 class LottoResult {
   constructor() {
@@ -45,7 +46,7 @@ class LottoResult {
     const totalPrize = this.getTotalPrize();
     const rate = (totalPrize / purchaseAmount) * 100;
 
-    return Math.round(rate * 10) / 10;
+    return roundToDecimal(rate, 1);
   }
 
   toRows() {
